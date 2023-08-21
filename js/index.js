@@ -31,10 +31,13 @@ placementTilesData2D.forEach((row, y) => {
   });
 });
 
-image.onload = () => {
-  animate();
-};
+image.onload = () => {};
 image.src = "assets/maps/Level1.png";
+
+function startGame() {
+  animate();
+  document.getElementById("startGame").style.visibility = "hidden";
+}
 
 const enemies = [];
 
