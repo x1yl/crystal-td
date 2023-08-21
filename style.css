@@ -11,7 +11,7 @@
 
   
 
- #gameCanvas {
+  #gameCanvas {
   position: relative; 
   display: inline-block;
  }
@@ -31,52 +31,47 @@
   -webkit-text-stroke: 2px black;
  }
 
- #healthValue {
+ #health {
   position: absolute;
   top: 5px;
   right: 10px;
   color: white;
-  -webkit-text-stroke: 2px black;
-  font-size: 28px;
- }
+  -webkit-text-stroke: 1px black;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
 
-#health {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  color: white;
-  -webkit-text-stroke: 2px black;
-  font-size: 28px;
+#healthValue {
+  margin-right: 10px;
+  display: inline-block;
 }
 
 #heartGIF {
   width: 26px;
   height: auto;
-  margin-right: 50px;
-  margin-top: 3px;
+  margin-right: 5px;
 }
-
-#gemValue {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  color: white;
-  -webkit-text-stroke: 2px black;
-  font-size: 28px;
- }
 
 #currency {
   position: absolute;
   top: 5px;
   right: 95px;
   color: white;
-  -webkit-text-stroke: 2px black;
-  font-size: 28px;
+  -webkit-text-stroke: 1px black;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+
+#gemValue {
+  margin-right: 10px;
+  display: inline-block;
 }
 
 #gemGIF {
-  width: 26px;
+  margin-top: -4px;
+  width: 30px;
   height: auto;
-  margin-right: 50px;
-  margin-top: 3px;
+  margin-right: 5px;
 }
