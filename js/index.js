@@ -71,10 +71,14 @@ let hearts = 100;
 let coins = 100;
 spawnEnemies(enemyCount);
 
+function drawImage() {
+    c.drawImage(image, 0, 0, window.innerWidth, window.innerHeight);
+}
+
 function animate() {
   const animationId = requestAnimationFrame(animate);
 
-  c.drawImage(image, 0, 0, window.innerWidth, window.innerHeight);
+  drawImage();
 
   for (let i = enemies.length - 1; i >= 0; i--) {
     const enemy = enemies[i];
@@ -182,4 +186,10 @@ window.addEventListener("mousemove", (event) => {
       break;
     }
   }
+});
+
+window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    drawImage();
 });
