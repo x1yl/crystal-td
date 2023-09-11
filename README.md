@@ -1,3 +1,4 @@
-# Pixel Tower Defense (Pixel TD)
+# Crystal Tower Defense (Crystal TD)
 
-A horribly made decently fun game if you have no Wi-Fi
+Defend your land from the Crystals!
+Place towers to damage the crystals and try to survive
