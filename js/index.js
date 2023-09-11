@@ -43,6 +43,8 @@ placementTilesData2D.forEach((row, y) => {
 
 image.onload = () => {};
 image.src = "assets/maps/Level1.png";
+image.height = window.innerHeight;
+image.width = window.innerWidth;
 
 function startGame() {
   animate();
