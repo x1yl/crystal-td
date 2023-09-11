@@ -7,6 +7,8 @@
     font-family: StackedPixel;
     background-color: black;
     cursor: url('assets/img/Cursor_Default/8_white.png')  , auto;
+    margin: 0;
+    padding: 0;
   }
   
   #startGame {
