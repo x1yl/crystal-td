@@ -43,8 +43,7 @@ placementTilesData2D.forEach((row, y) => {
 
 image.onload = () => {};
 image.src = "assets/maps/Level1.png";
-image.height = window.innerHeight;
-image.width = window.innerWidth;
+
 
 function startGame() {
   animate();
@@ -75,7 +74,7 @@ spawnEnemies(enemyCount);
 function animate() {
   const animationId = requestAnimationFrame(animate);
 
-  c.drawImage(image, 0, 0);
+  c.drawImage(image, 0, 0, window.innerWidth, window.innerHeight);
 
   for (let i = enemies.length - 1; i >= 0; i--) {
     const enemy = enemies[i];
