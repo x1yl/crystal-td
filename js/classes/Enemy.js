@@ -1,14 +1,14 @@
 class Enemy {
   constructor({ position = { x: 0, y: 0 } }) {
     this.position = position;
-    this.width = 32;
-    this.height = 32;
+    this.width = 16;
+    this.height = 16;
     this.waypointIndex = 0;
     this.center = {
       x: this.position.x + this.width / 2,
       y: this.position.y + this.height / 2,
     };
-    this.radius = 16;
+    this.radius = 8;
     this.health = 100;
     this.velocity = {
       x: 0,
@@ -44,7 +44,7 @@ class Enemy {
     const xDistance = waypoint.x - this.center.x;
     const angle = Math.atan2(yDistance, xDistance);
 
-    const speed = 1;
+    const speed = 0.45;
 
     this.velocity.x = Math.cos(angle) * speed;
     this.velocity.y = Math.sin(angle) * speed;

@@ -1,7 +1,17 @@
+// play btn
+
+const itemGui = document.getElementById("item-gui");
+const playBtn = document.getElementById("startGame");
+
+playBtn.addEventListener("click", () => {
+  // Toggle the 'hidden' class to show/hide the element
+  itemGui.classList.toggle("hidden");
+});
+
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
-canvas.width = 704;
-canvas.height = 448;
+canvas.width = 416;
+canvas.height = 256;
 
 c.fillStyle = "white";
 c.fillRect(0, 0, canvas.width, canvas.height);
@@ -9,21 +19,21 @@ const image = new Image();
 
 const placementTilesData2D = [];
 
-for (let i = 0; i < placementTilesData.length; i += 22) {
-  placementTilesData2D.push(placementTilesData.slice(i, i + 22));
+for (let i = 0; i < placementTilesData.length; i += 26) {
+  placementTilesData2D.push(placementTilesData.slice(i, i + 26));
 }
 
 const placementTiles = [];
 
 placementTilesData2D.forEach((row, y) => {
   row.forEach((symbol, x) => {
-    if (symbol === 80) {
+    if (symbol === 359) {
       // add tower placement
       placementTiles.push(
         new PlacementTile({
           position: {
-            x: x * 32,
-            y: y * 32,
+            x: x * 16,
+            y: y * 16,
           },
         })
       );
@@ -43,7 +53,7 @@ const enemies = [];
 
 function spawnEnemies(spawnCount) {
   for (let i = 1; i < spawnCount + 1; i++) {
-    const xOffset = i * 70;
+    const xOffset = i * 40;
     enemies.push(
       new Enemy({
         position: { x: waypoints[0].x - xOffset, y: waypoints[0].y },
@@ -69,7 +79,7 @@ function animate() {
     const enemy = enemies[i];
     enemy.update();
 
-    if (enemy.position.x > canvas.height * 1.178) {
+    if (enemy.position.x > canvas.height * 1.65) {
       hearts -= 10;
       enemies.splice(i, 1);
       document.querySelector("#healthValue").innerHTML = hearts;

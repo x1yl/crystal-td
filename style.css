@@ -8,12 +8,11 @@
     background-color: black;
     cursor: url('assets/img/Cursor_Default/8_white.png')  , auto;
   }
-
   
   #startGame {
     position: absolute;
     top: 126px;
-    right: 328px;
+    right: 178px;
     padding: 15px;
     cursor: url('assets/img/Cursor_Default/8_white.png')  , auto;
   }
@@ -44,7 +43,7 @@
   right: 10px;
   color: white;
   -webkit-text-stroke: 1px black;
-  font-size: 30px;
+  font-size: 15px;
   display: flex;
   align-items: center;
 }
@@ -55,7 +54,7 @@
 }
 
 #heartGIF {
-  width: 26px;
+  width: 13px;
   height: auto;
   margin-right: 5px;
 }
@@ -63,10 +62,10 @@
 #currency {
   position: absolute;
   top: 5px;
-  right: 95px;
+  right: 69px;
   color: white;
   -webkit-text-stroke: 1px black;
-  font-size: 30px;
+  font-size: 15px;
   display: flex;
   align-items: center;
 }
@@ -78,7 +77,12 @@
 
 #gemGIF {
   margin-top: -4px;
-  width: 30px;
+  width: 15px;
   height: auto;
   margin-right: 5px;
+}
+
+
+.hidden {
+  display: none;
 }
