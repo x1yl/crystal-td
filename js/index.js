@@ -191,5 +191,19 @@ window.addEventListener("mousemove", (event) => {
 window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+
+    // Calculate the scale factor
+    const scaleX = canvas.width / (16 * 26); // Assuming 16x16 tiles and 26 columns
+    const scaleY = canvas.height / (16 * (placementTilesData2D.length)); // Assuming 16x16 tiles
+
+    // Apply the scale to all enemies
+    for (let i = 0; i < enemies.length; i++) {
+        const enemy = enemies[i];
+        enemy.position.x *= scaleX;
+        enemy.position.y *= scaleY;
+    }
+
+    // Redraw the background image
     drawImage();
 });
+
