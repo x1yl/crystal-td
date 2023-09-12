@@ -189,19 +189,7 @@ window.addEventListener("mousemove", (event) => {
 });
 
 window.addEventListener("resize", () => {
-    const widthScale = window.innerWidth / canvas.width;
-    const heightScale = window.innerHeight / canvas.height;
-
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-
-    // Update the position of enemies based on the new canvas size
-    for (let i = 0; i < enemies.length; i++) {
-        enemies[i].width *= widthScale;
-        enemies[i].height *= heightScale;
-    }
-
     drawImage();
 });
-
-
