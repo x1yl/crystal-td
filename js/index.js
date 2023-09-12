@@ -189,21 +189,19 @@ window.addEventListener("mousemove", (event) => {
 });
 
 window.addEventListener("resize", () => {
+    const widthScale = window.innerWidth / canvas.width;
+    const heightScale = window.innerHeight / canvas.height;
+
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // Calculate the scale factor
-    const scaleX = canvas.width / 16; // Assuming 16x16 tiles and 26 columns
-    const scaleY = canvas.height / 16; // Assuming 16x16 tiles
-
-    // Apply the scale to all enemies
+    // Update the position of enemies based on the new canvas size
     for (let i = 0; i < enemies.length; i++) {
-        const enemy = enemies[i];
-        enemy.width = 16 * scaleX;
-        enemy.height = 16 * scaleY;
+        enemies[i].width *= widthScale;
+        enemies[i].height *= heightScale;
     }
 
-    // Redraw the background image
     drawImage();
 });
+
 
