@@ -199,8 +199,8 @@ window.addEventListener("resize", () => {
     // Apply the scale to all enemies
     for (let i = 0; i < enemies.length; i++) {
         const enemy = enemies[i];
-        enemy.width *= scaleX;
-        enemy.height *= scaleY;
+        enemy.width = 16 * scaleX;
+        enemy.height = 16 * scaleY;
     }
 
     // Redraw the background image
